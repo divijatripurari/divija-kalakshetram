@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Divija Kalakshetram | The School of Arts</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#fffaf4;
+color:#333;
+line-height:1.7;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#7a0019;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+z-index:1000;
+box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.logo h1{
+color:white;
+font-size:30px;
+}
+
+.logo p{
+color:#f6d28b;
+font-size:14px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#f6d28b;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("images/WhatsApp Image 2026-07-16 at 10.10.04 PM.jpeg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.hero h2{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+background:#d4af37;
+padding:15px 35px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+color:#7a0019;
+transition:.3s;
+}
+
+.btn:hover{
+background:white;
+}
+
+/* SECTIONS */
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+color:#7a0019;
+font-size:38px;
+margin-bottom:10px;
+}
+
+.section-subtitle{
+text-align:center;
+color:#777;
+margin-bottom:50px;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:15px;
+}
+
+.about h3{
+color:#7a0019;
+margin-bottom:20px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+cursor:pointer;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* COURSES */
+
+.course-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#7a0019;
+margin-bottom:15px;
+}
+
+/* TEACHERS */
+
+.teacher-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.teacher{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.teacher img{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+/* TESTIMONIALS */
+
+.testimonial{
+background:white;
+padding:30px;
+border-radius:15px;
+margin-bottom:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+/* CONTACT */
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+form input,
+form textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:15px;
+}
+
+form button{
+background:#7a0019;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+iframe{
+width:100%;
+height:350px;
+border:0;
+border-radius:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:#7a0019;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+left:25px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+font-size:26px;
+text-decoration:none;
+}
+
+#topBtn{
+position:fixed;
+bottom:25px;
+right:25px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#7a0019;
+color:white;
+font-size:20px;
+cursor:pointer;
+display:none;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.about,
+.contact{
+grid-template-columns:1fr;
+}
+
+.hero h2{
+font-size:38px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h1>Divija Kalakshetram</h1>
+<p>The School of Arts</p>
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#courses">Courses</a>
+<a href="#teachers">Teachers</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h2>Preserving Tradition Through Dance</h2>
+
+<p>
+Experience the grace of Kuchipudi and the richness of Indian culture with Divija Kalakshetram.
+</p>
+
+<a href="#contact" class="btn">Enroll Now</a>
+
+</div>
+
+</section>
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About Us</h2>
+
+<p class="section-subtitle">
+A place where tradition, discipline, devotion, and creativity come together.
+</p>
+
+<div class="about">
+
+<img src="images/WhatsApp Image 2026-07-16 at 10.06.10 PM.jpeg" alt="About Divija Kalakshetram">
+
+<div>
+
+<h3>Welcome to Divija Kalakshetram</h3>
+
+<p>
+Divija Kalakshetram is dedicated to preserving the rich heritage of Indian classical dance through professional Kuchipudi training. We believe dance is not just movement—it is discipline, devotion, confidence, and self-expression.
+</p>
+
+<p>
+Our academy welcomes students of all ages and guides them from beginner to advanced levels with personal attention and regular stage performances.
+</p>
+
+<p>
+Join us to begin a beautiful journey of rhythm, culture, grace, and lifelong learning.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2 class="section-title">Gallery</h2>
+
+<p class="section-subtitle">
+Some memorable moments from our classes and performances.
+</p>
+
+<div class="gallery">
+
+<img src="images/WhatsApp Image 2026-07-16 at 9.58.37 PM (1).jpeg" alt="">
+<img src="images/WhatsApp Image 2026-07-16 at 9.58.37 PM (2).jpeg" alt="">
+<img src="images/WhatsApp Image 2026-07-16 at 9.58.37 PM (3).jpeg" alt="">
+<img src="images/WhatsApp Image 2026-07-16 at 9.58.37 PM.jpeg" alt="">
+<img src="images/WhatsApp Image 2026-07-16 at 9.59.04 PM.jpeg" alt="">
+<img src="images/WhatsApp Image 2026-07-16 at 10.00.09 PM.jpeg" alt="">
+
+</div>
+
+</section>
+
+<!-- COURSES -->
+
+<section id="courses">
+
+<h2 class="section-title">Our Courses</h2>
+
+<p class="section-subtitle">
+Professional training for every age and skill level.
+</p>
+
+<div class="course-container">
+
+<div class="card">
+<h3>💃 Kuchipudi Dance</h3>
+<p>
+Beginner, Intermediate and Advanced level training with practical sessions and stage performances.
+</p>
+</div>
+
+<div class="card">
+<h3>🌸 Folk Dance</h3>
+<p>
+Traditional Indian folk dance training for festivals, competitions and cultural events.
+</p>
+</div>
+
+<div class="card">
+<h3>🎭 Stage Performance</h3>
+<p>
+Special coaching for annual programs, competitions and cultural festivals.
+</p>
+</div>
+
+<div class="card">
+<h3>👧 Kids Dance Classes</h3>
+<p>
+Fun and engaging dance classes specially designed for young children.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TEACHERS -->
+
+<section id="teachers">
+
+<h2 class="section-title">Our Instructor</h2>
+
+<p class="section-subtitle">
+Dedicated to nurturing every student's artistic journey.
+</p>
+
+<div class="teacher-container">
+
+<div class="teacher">
+
+<img src="images/IMG-20251210-WA0013.jpg" alt="Instructor">
+
+<h3>Guru Natya Sikhamani Tripurari Divija</h3>
+
+<p>
+Founder and Kuchipudi Instructor with a passion for preserving Indian classical dance and inspiring the next generation.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section>
+
+<h2 class="section-title">Testimonials</h2>
+
+<p class="section-subtitle">
+What our students and parents say.
+</p>
+
+<div class="testimonial">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+"My daughter has gained confidence, discipline and stage presence after joining Divija Kalakshetram. The teaching is excellent."
+</p>
+
+<strong>- Parent</strong>
+
+</div>
+
+<div class="testimonial">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+"I love learning Kuchipudi here. Every class is enjoyable and inspiring."
+</p>
+
+<strong>- Student</strong>
+
+</div>
+
+</section>
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<p class="section-subtitle">
+Start your dance journey with Divija Kalakshetram today.
+</p>
+
+<div class="contact">
+
+<div>
+
+<h3>Get in Touch</h3>
+
+<p><strong>📍 Address:</strong>NSC bose road,Vishal Mart street,Near Union bank,Tanuku</p>
+
+<p><strong>📞 Phone:</strong> +91 7893858111</p>
+
+<p><strong>📧 Email:</strong> tripuraridivija06@gmail.com</p>
+
+<p><strong>🕒 Timings:</strong> Monday - Saturday | 6:30 PM - 8:00 PM Sunday | 10:00 AM - 12:00 PM</p>
+
+<br>
+
+<iframe
+src="https://www.google.com/maps/embed?pb="
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+<div>
+
+<h3>Admission Form</h3>
+
+<form id="admissionForm">
+
+<input
+type="text"
+placeholder="Student Name"
+required>
+
+<input
+type="number"
+placeholder="Age"
+required>
+
+<input
+type="tel"
+placeholder="Mobile Number"
+required>
+
+<input
+type="email"
+placeholder="Email Address"
+required>
+
+<textarea
+rows="6"
+placeholder="Message">
+</textarea>
+
+<button type="submit">
+Submit
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Divija Kalakshetram | The School of Arts
+</p>
+
+<p>
+Preserving Tradition Through Dance
+</p>
+
+</footer>
+
+<!-- WhatsApp Button -->
+
+<a
+href="https://wa.me/917893858111"
+class="whatsapp"
+target="_blank">
+
+💬
+
+</a>
+
+<!-- Back To Top -->
+
+<button id="topBtn">
+↑
+</button>
+
+<script>
+
+/* Smooth Navigation */
+
+document.querySelectorAll("nav a").forEach(link=>{
+
+link.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+});
+
+});
+
+/* Admission Form */
+
+document.getElementById("admissionForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Thank you for registering.\nWe will contact you soon.");
+
+this.reset();
+
+});
+
+/* Scroll Animation */
+
+const sections=document.querySelectorAll("section");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},{
+threshold:0.2
+});
+
+sections.forEach(section=>{
+
+section.style.opacity="0";
+
+section.style.transform="translateY(40px)";
+
+section.style.transition=".8s";
+
+observer.observe(section);
+
+});
+
+/* Card Hover */
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-10px)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0)";
+
+});
+
+});
+
+/* Back To Top */
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+/* Dynamic Footer */
+
+document.querySelector("footer p").innerHTML=
+
+`© ${new Date().getFullYear()} Divija Kalakshetram | The School of Arts`;
+
+console.log("Welcome to Divija Kalakshetram");
+
+</script>
+
+</body>
+</html>
